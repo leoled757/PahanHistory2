@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f0f0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    width: 200px;
+    height: 140px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    max-height: 300px;
+    
+}
+
+.card.expanded{
+    width: 80%;
+    height: 500px;
+}
+
+.expand-btn{
+    width: 200px;
+    margin-top: 0;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+}
+
+.expand-btn:hover{
+    background-color: #45a049;
+}
+
+.card-content{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    overflow-y: auto;
+    max-height: 1000px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #4caf50;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        width: 150px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .navbar .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.about {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
