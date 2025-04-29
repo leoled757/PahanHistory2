@@ -26,13 +26,17 @@ body {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    max-height: 80vh;
+    max-height: none;
+    max-width: none;
     
 }
 
 .card.expanded{
     width: 98%;
-    height: 80vh;
+    max-width: none;
+    height: 90vh;
+    max-height: none;
+    overflow-y: auto;
 }
 
 .expand-btn{
@@ -125,6 +129,9 @@ body {
 
     .hamburger {
         display: flex;
+    }
+    .card.expanded{
+        height: 90vh;
     }
 }
 
