@@ -26,13 +26,13 @@ body {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    max-height: 300px;
+    max-height: 80vh;
     
 }
 
 .card.expanded{
-    width: 80%;
-    height: 500px;
+    width: 98%;
+    height: 80vh;
 }
 
 .expand-btn{
